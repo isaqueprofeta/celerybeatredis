@@ -61,6 +61,33 @@ This is a demo for exmaple, you can check the code in `example` directory
     $ python rem_task.py
     ```
 
+# Docker with supervisor demo
+
+Docker demo can be used from example folder:
+
+	# cd celerybeatredis/example
+	# docker-compose up -d
+
+After you have it running, you can easily see it working with following commands:
+
+1. Celery worker/beat logs
+
+    ```
+    $ docker-compose logs
+    ```
+
+4. dynamic add the task `sub`
+
+    ```
+    $ docker exec -it celerybeatredis python add_task.py
+    ```
+
+5. dynamic remove the task `sub`
+
+    ```
+    $ docker exec -it celerybeatredis python rem_task.py
+    ```
+
 # Configuration
 
 Configuration for `redisbeat` is similar to the original celery configuration for beat.

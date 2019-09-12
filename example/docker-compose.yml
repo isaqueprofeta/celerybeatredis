@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  celerybeatredis:
+    container_name: celerybeatredis
+    hostname: celerybeatredis
+    restart: unless-stopped
+    build:
+      context: .
